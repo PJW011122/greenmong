@@ -1,0 +1,9 @@
+services:
+  web:
+    container_name: "react_client"
+    build:
+      context: ./service/react_client # React 클라이언트 Dockerfile 경로
+      dockerfile: Dockerfile.web
+    restart: "on-failure"
+    ports: # 포트 설정 (Local로 입력 -> Docker 내부 컨테이너 동작)
+      - ${REACT_LOCAL_PORT}:${REACT_DOCKER_PORT}
