@@ -5,13 +5,9 @@ import Container from "react-bootstrap/Container";
 // import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import {
-  AiOutlineHome,
-  AiOutlineLink,
-  AiOutlineFileSync,
-} from "react-icons/ai";
-import { IoSchoolOutline } from "react-icons/io5";
-import { CiViewTable } from "react-icons/ci";
+import { AiOutlineHome } from "react-icons/ai";
+import { TbLetterE } from "react-icons/tb";
+import { FaQuestion } from "react-icons/fa6";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -36,8 +32,12 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
-          <h3 style={{ fontWeight: "bold" }}>파아란 시대</h3>
+          <img
+            src="/logo_brand.png"
+            className="img-fluid logo"
+            alt="그린몽 브랜드 로고"
+            style={{ maxHeight: "40px" }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -60,43 +60,21 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/f12"
+                to="/esg"
                 onClick={() => updateExpanded(false)}
               >
-                <IoSchoolOutline style={{ marginBottom: "2px" }} /> F12
+                <TbLetterE style={{ marginBottom: "2px" }} /> 환경 경영 평가
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/timetable"
+                to="/faq"
                 onClick={() => updateExpanded(false)}
               >
-                <CiViewTable style={{ marginBottom: "2px" }} /> 시간표
+                <FaQuestion style={{ marginBottom: "2px" }} /> FAQ
               </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/solution"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFileSync style={{ marginBottom: "2px" }} /> 족보
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://wise.uos.ac.kr/"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <AiOutlineLink style={{ marginBottom: "2px" }} /> WISE 바로가기
-                {/* <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} /> */}
-              </Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

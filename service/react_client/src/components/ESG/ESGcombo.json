@@ -1,0 +1,8 @@
+[
+  { "pk": 1, "type": "과일", "detailType": "1", "content": "사과" },
+  { "pk": 2, "type": "과일", "detailType": "2", "content": "바나나" },
+  { "pk": 3, "type": "야채", "detailType": "1", "content": "토마토" },
+  { "pk": 4, "type": "야채", "detailType": "2", "content": "피망" },
+  { "pk": 5, "type": "동물", "detailType": "1", "content": "강아지" },
+  { "pk": 6, "type": "동물", "detailType": "2", "content": "고양이" }
+]

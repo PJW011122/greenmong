@@ -1,37 +1,36 @@
-/* NanumBarunGothic 폰트 정의 */
+/* Pretendard 폰트 정의 */
 @font-face {
-  font-family: 'NanumBarunGothic';
-  src: url('../public/assets/fonts/NanumBarunGothic.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Pretendard';
+  src: url('../public/assets/fonts/Pretendard-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NanumBarunGothic';
-  src: url('../public/assets/fonts/NanumBarunGothicBold.ttf') format('truetype');
-  font-weight: bold;
+  font-family: 'Pretendard';
+  src: url('../public/assets/fonts/Pretendard-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NanumBarunGothic';
-  src: url('../public/assets/fonts/NanumBarunGothicLight.ttf') format('truetype');
-  font-weight: 300;
+  font-family: 'Pretendard';
+  src: url('../public/assets/fonts/Pretendard-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'NanumBarunGothic';
-  src: url('../public/assets/fonts/NanumBarunGothicUltraLight.ttf') format('truetype');
-  font-weight: 200;
+  font-family: 'Pretendard';
+  src: url('../public/assets/fonts/Pretendard-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* ExtraBold */
   font-style: normal;
 }
 
-/* 기존 스타일에서 폰트 변경 */
+/* 기본 폰트 스타일 설정 */
 body {
   margin: 0;
-  font-family: 'NanumBarunGothic', serif !important; /* Raleway에서 NanumBarunGothic으로 변경 */
+  font-family: 'Pretendard', serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
 }

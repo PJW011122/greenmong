@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
-import F12 from "./components/F12/F12";
-import Timetable from "./components/Timetable/Timetable";
-import Solution from "./components/Solution/Solution";
+import F12 from "./components/ESG/ESG";
+import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
@@ -20,7 +18,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
-  const [backendStatus, setBackendStatus] = useState("연결 중...");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,19 +25,6 @@ function App() {
     }, 1200);
 
     return () => clearTimeout(timer);
-  }, []);
-
-  // 백엔드 연결 확인
-  useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_FASTAPI}/health`) // FastAPI 서버의 주소 (개발)
-      // .get(`/health`) // FastAPI 서버의 주소 (배포)
-      .then((response) => {
-        setBackendStatus("연결 성공!"); // 응답 성공 시 상태 업데이트
-      })
-      .catch((error) => {
-        setBackendStatus("연결 실패!"); // 오류 시 상태 업데이트
-      });
   }, []);
 
   return (
@@ -51,13 +35,10 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-        {/* <div className="backend-status">{backendStatus}</div>{" "} */}
-        {/* 백엔드 상태 표시 */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/f12" element={<F12 />} />
-          <Route path="/timetable" element={<Timetable />} />
-          <Route path="/solution" element={<Solution />} />
+          <Route path="/esg" element={<F12 />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />

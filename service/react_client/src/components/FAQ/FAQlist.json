@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is React?",
+    "answer": "assets/FAQ/faq_1.png",
+    "isOpen": false
+  },
+  {
+    "question": "What is JSX?",
+    "answer": "assets/FAQ/faq_2.png",
+    "isOpen": false
+  },
+  {
+    "question": "What are props?",
+    "answer": "assets/FAQ/faq_1.png",
+    "isOpen": false
+  }
+]

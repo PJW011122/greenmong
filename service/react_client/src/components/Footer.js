@@ -1,53 +1,24 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillGithub, AiFillGitlab, AiFillInstagram } from "react-icons/ai";
 
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
   return (
-    <Container fluid className="footer">
+    <Container
+      fluid
+      className="footer"
+      style={{
+        display: "flex",
+        justifyContent: "center", // 수평 가운데 정렬
+        alignItems: "center", // 수직 가운데 정렬
+        textAlign: "center", // 텍스트 정렬
+      }}
+    >
       <Row>
-        <Col md="4" className="footer-copywright">
-          {/* <h3>Designed by Soumyajit Behera</h3> */}
-          <h3>해당 사이트는 서울시립대와 무관합니다.</h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} 파아란</h3>
-        </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/PJW011122"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://gitlab.com/PJW011122"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillGitlab />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/a_mollang_u"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
-          </ul>
+        <Col md="auto" className="footer-copywright">
+          <h3>
+            그린몽은 서울시립대학교 환경공학부 환경종합설계 프로젝트로
+            제작되었습니다.
+          </h3>
         </Col>
       </Row>
     </Container>
