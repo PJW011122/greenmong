@@ -32,5 +32,5 @@ jobs:
 
       - name: Tag and push Docker images
         run: |
-          docker tag greenmong-client:latest "${{ env.DOCKER_IMAGE }}:client-${{ github.ref_name }}"
+          docker tag greenmong-web:latest "${{ env.DOCKER_IMAGE }}:client-${{ github.ref_name }}"
           docker push "${{ env.DOCKER_IMAGE }}:client-${{ github.ref_name }}"
